@@ -20,6 +20,17 @@ const app = express();
 // scripts मे जाकर करना है ये बदलाव 
 // अब npx run dev से काम चल जाएगा 
 
+// ----------------------Port imported----------------------------------
+import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
+dotenv.config();
+const PORT = process.env.PORT;
+
+app.use(express.json());
+
+// ----------------------connect db----------------------------------
+import { connectDB } from "./lib/db.js";
+
 // ----------------------other imports----------------------------------
 
 import authRoute from "./routes/auth.route.js";
@@ -32,6 +43,7 @@ import authRoute from "./routes/auth.route.js";
 // उसके फ़ोल्डर मे उसका लॉजिक है 
 
 app.use("/api/auth", authRoute);
+app.use(cookieParser());
 
 // अब हम क्या करेंगे हम हम राउट को इम्पोर्ट करके use करेंगे 
 // अब ध्यान देना 
@@ -64,8 +76,9 @@ app.get("/", (req, res)=> {
 
 // -----------------------test if server running---------------------------------
 
-app.listen(5001, ()=>{
+app.listen(PORT, ()=>{
     console.log('server running');
+    connectDB()
 })
 
 // यहा  app रन होने पर console log हो जाएगा कुछ 

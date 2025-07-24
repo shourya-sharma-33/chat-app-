@@ -5,7 +5,8 @@ import express from "express";
 
 // ======================================
 // ye functions import कीये, क्यू कीये ये हम जानेंगे 
-import { login, logout, signup } from "../controllers/auth.controller";
+import { checkAuth, login, logout, signup, updateProfile } from "../controllers/auth.controller.js";
+import { protectRoute } from "../middleware/auth.middleware.js";
 // ===========================================================
 
 const router = express.Router();
@@ -47,8 +48,11 @@ const router = express.Router();
 // क्युकी its a better practice
 // to have these function in controller file
 
-router.get("/signup", signup);
-router.get("/login", login);
-router.get("/logout", logout);
-
+router.post("/signup", signup);
+router.post("/login", login);
+router.post("/logout", logout);
+ 
+router.put("/update-profile", protectRoute, updateProfile);
+router.get("/check", protectRoute, checkAuth);
+// router.get("/check", protectRoute, checkAuth)
 export default router;

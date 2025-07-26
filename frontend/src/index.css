@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.background-color-pink {
+    background-color: #DEF2FD;
+    background-image: url("src/assets/background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #11222B;
+  font-variation-settings:
+    "wdth" 100;
+
+}
+
+.border-left-line {
+  border-right: 1px solid rgb(8, 39, 75);
+  
+}

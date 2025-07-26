@@ -55,10 +55,10 @@ app.use(express.json());
 // We tell our app to use cookie-parser middleware for handling cookies.
 app.use(cookieParser());
 app.use(cors({
-origin: "http://localhost:5173",
-credentials : true
+  origin: "http://localhost:5173",
+  credentials : true
 }))
-
+ 
 // ---------------------Database Connection Import------------------------
 
 // Here, you import the function that connects your backend to a database.

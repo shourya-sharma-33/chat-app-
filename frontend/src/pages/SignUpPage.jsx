@@ -52,7 +52,6 @@ const SignUpPage = () => {
 
     tl.set(overlay, { y: "100%", display: "block", filter: "blur(0px)" })
       .to(overlay, { y: "0%", duration: 0.5, ease: "power3.out" })
-      .to(overlay, { filter: "blur(8px)", duration: 0.4, ease: "power3.out" }, "+=0.1");
   };
 
   return (
@@ -74,7 +73,8 @@ const SignUpPage = () => {
                 <div className="w-full rounded-xl bg-primary/10 flex flex-col items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <img src="/src/assets/logo.svg" alt="Logo" className="w-64 text-primary" />
                   <p className="text-base-content/60 cherry-bomb-one-regular text-xl">
-                    Get Started with your free account
+                    Get Started with your free account <br />
+                    <span className="text-sm cherry-bomb-one-regular">Made By <a href="https://github.com/shourya-sharma-33" className="cherry-bomb-one-regular text-red-700">Shourya Sharma</a></span>
                   </p>
                 </div>
               </div>

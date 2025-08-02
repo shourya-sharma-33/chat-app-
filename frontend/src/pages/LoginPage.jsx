@@ -42,11 +42,6 @@ const LoginPage = () => {
 
     tl.set(overlay, { y: "100%", display: "block", filter: "blur(0px)" })
       .to(overlay, { y: "0%", duration: 0.5, ease: "power3.out" })
-      .to(
-        overlay,
-        { filter: "blur(8px)", duration: 0.4, ease: "power3.out" },
-        "+=0.1"
-      );
   };
 
   return (
@@ -85,6 +80,8 @@ const LoginPage = () => {
                   <p className="text-base-content/60 cherry-bomb-one-regular text-xl">
                     Login to your account
                   </p>
+                  <span className="text-sm cherry-bomb-one-regular">Made By <a href="https://github.com/shourya-sharma-33" className="cherry-bomb-one-regular text-red-700">Shourya Sharma</a></span>
+                 
                 </div>
               </div>
             </div>

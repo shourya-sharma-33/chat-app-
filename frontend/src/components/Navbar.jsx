@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 h-16">
           <div className="flex items-center justify-between h-full">
             <div className="flex items-center gap-8">
-              <img src="/src/assets/logo2.svg" alt="Logo" className="w-64 m-3 text-primary" />
+              <img src="/src/assets/logo2.svg" alt="Logo" className="w-32 m-3 text-primary" />
             </div>
             <div className="flex items-center gap-5">
               <Link to="/settings" className="h-6 w-6 flex items-center">

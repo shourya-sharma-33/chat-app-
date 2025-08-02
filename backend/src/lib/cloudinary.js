@@ -2,10 +2,10 @@
 import { v2 as cloudinary } from "cloudinary";
 
 // Import dotenv to read environment variables from the .env file
-import dotenv from "dotenv";
+import {config} from "dotenv";
 
 // Initialize dotenv configuration to load variables from .env into process.env
-dotenv.config();
+config();
 
 // Configure Cloudinary with your account credentials from environment variables
 cloudinary.config({
